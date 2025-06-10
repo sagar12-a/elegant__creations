@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>International beauty skills academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+   <style>
+    /* === Base Layout === */
+.hero-slider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background: #fff;
+  gap: 20px;
+  flex-direction: row;
+}
+
+/* === Hero Left (Text Content) === */
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.hero-content-slider {
+  position: relative;
+}
+
+.hero-content-slider .hero-slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+}
+
+.hero-content-slider .active-slide {
+  opacity: 1;
+  position: relative;
+}
+
+/* === Text Styling === */
+.hero-slide h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.hero-slide p {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.hero-slide button {
+  padding: 10px 20px;
+  background-color: #19050c;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero-slide button:hover {
+  background-color: #100c0d;
+}
+
+/* === Hero Right (Image) === */
+.hero-right {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .hero-slider {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-right {
+    order: 1; /* Show image on top */
+  }
+
+  .hero-left {
+    order: 2; /* Show text below */
+  }
+
+  .hero-slide h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-slide p {
+    font-size: 1em;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/0026ef12-0de3-467b-9bf8-00dcab5cad3e.jpg" alt="Salon Logo" />
+       
+      </a>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="hair.html">Women's eyebrow threading</a></li>
+          <li><a href="makeup.html">Eyelash extensions</a></li>
+          <li><a href="skin.html">Balayage & Ombre</a></li>
+          <li><a href="nail.html">Hair Colors & Highlights</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+  </nav>
+</header>
+
+<!-- WhatsApp Button -->
+<div id="whatsapp-chat">
+  <a href="https://wa.me/6402108501756" target="_blank" id="whatsapp-button">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
+  </a>
+</div>
+
+
+   <div class="hero-slider">
+    <div class="hero-left">
+      <div class="hero-content-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active-slide">
+          <h1>Where Elegance Meets You</h1>
+          <p>At Elegant Creation, we bring your beauty vision to life with expert care and personalized style. From flawless haircuts to radiant beauty treatments, experience elegance and confidence in every visit.</p>
+          <a href="contact.html"><button>Get Started</button></a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <h1>Transform Your Look Today</h1>
+          <p>Our expert team is dedicated to providing personalized hair and beauty services that enhance your natural elegance and confidence.</p>
+          <a href="contact.html"><button>Get Started</button></a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <h1>Elevate Your Look with Expert Touch</h1>
+          <p>Step into our welcoming salon and experience a luxurious atmosphere where your comfort and satisfaction come first.</p>
+          <a href="contact.html"><button>Get Started</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="images/web.png" alt="Course Image">
+    </div>
+  </div>
+
+
+
+  
+
+  <section class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/OIPhh.jpg" alt="Beauty Skills Academy">
+    </div>
+    <div class="about-content">
+      <h2>About Elegant Creation</h2>
+      <p>
+
+        Welcome to Elegant Creation, your premier hair and beauty salon located in the heart of Papatoetoe, New Zealand. We specialize in delivering top-quality haircuts, coloring, styling, and a full range of beauty treatments tailored to enhance your natural beauty. Our experienced and passionate team is committed to providing personalized services in a warm, friendly environment where you can relax and feel pampered. At Elegant Creation, we use premium products and the latest techniques to ensure you leave our salon looking and feeling your absolute best. Whether you want a bold new look or subtle enhancements, we take pride in creating styles that reflect your unique personality and lifestyle. Discover the perfect blend of elegance, creativity, and expert care at Elegant Creation—where beauty meets excellence.
+         </p>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+  <section class="courses-section">
+  <h2>Our Services</h2>
+  <div class="courses-container">
+    <div class="course-card">
+      <div class="icon"></div>
+      <h3>Women's eyebrow threading</h3>
+      <p> At Elegant Creation, we shape and define your brows with precision for a clean, polished look that perfectly frames your face.</p>
+        <a href="hair.html" class="btn explore-btn">Explore More</a>
+    </div>
+    
+    <div class="course-card">
+      <div class="icon"></div>
+      <h3>Eyelash extensions</h3>
+      <p>  At Elegant Creation, we enhance your natural beauty by adding length, volume, and curl for a stunning, eye-opening look that lasts.</p>
+        <a href="makeup.html" class="btn explore-btn">Explore More</a>
+    </div>
+     
+    <div class="course-card">
+      <div class="icon"></div>
+<h3>Balayage & Ombre</h3>
+
+      <p>At Elegant Creation, our skilled stylists create seamless, natural-looking gradients that add depth and dimension to your hair.</p>
+        <a href="skin.html" class="btn explore-btn">Explore More</a>
+    </div>
+     
+    <div class="course-card">
+      <div class="icon"></div>
+      <h3>Hair Colors & Highlights</h3>
+      <p>Whether you want a vibrant new shade, subtle highlights, or a full-color makeover, our skilled stylists use premium products to deliver stunning, long-lasting results</p>
+        <a href="nail.html" class="btn explore-btn">Explore More</a>
+    </div>
+     
+  </div>
+</section>
+
+
+<!-- HTML -->
+<section class="slider-section">
+  <div class="slider-container">
+    <!-- Slider 1 -->
+    <div class="slider-card">
+      <h2 class="slider-title">Where Elegance Meets You</h2>
+      <p class="slider-description">
+        At Elegant Creation, we bring your beauty vision to life with expert care and personalized style. From flawless haircuts to radiant beauty treatments, experience elegance and confidence in every visit.
+      </p>
+    </div>
+
+    <!-- Slider 2 -->
+    <div class="slider-card">
+      <h2 class="slider-title">Transform Your Look Today</h2>
+      <p class="slider-description">
+        Our expert team is dedicated to providing personalized hair and beauty services that enhance your natural elegance and confidence.
+      </p>
+    </div>
+
+    <!-- Slider 3 -->
+    <div class="slider-card">
+      <h2 class="slider-title">Elevate Your Look with Expert Touch</h2>
+      <p class="slider-description">
+        Step into our welcoming salon and experience a luxurious atmosphere where your comfort and satisfaction come first.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- HTML: Latest News Section -->
+<section class="news-section">
+  <div class="news-container">
+    <h2 class="news-heading">Latest News</h2>
+    <div class="news-cards">
+      <!-- News 1 -->
+      <div class="news-card">
+        <h3 class="news-title">Top 5 Hair Care Tips for Healthy, Shiny Hair</h3>
+      </div>
+
+      <!-- News 2 -->
+      <div class="news-card">
+        <h3 class="news-title">How to Choose the Perfect Hair Color for Your Skin Tone</h3>
+      </div>
+
+      <!-- News 3 -->
+      <div class="news-card">
+        <h3 class="news-title">Balayage vs. Ombre: Which Hair Trend is Right for You?</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="why-vlcc-section">
+  <h2>Why Choose Elegant Creation Salon</h2>
+  <div class="features-grid">
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3615/3615570.png" alt="Personalized Service" />
+      </div>
+      <h4>Personalized Beauty Consultations</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/2920/2920255.png" alt="Modern Interior" />
+      </div>
+      <h4>Luxurious & Modern Ambiance</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3079/3079035.png" alt="Hygiene" />
+      </div>
+      <h4>Premium Hygiene Standards</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/1995/1995574.png" alt="Experts" />
+      </div>
+      <h4>Experienced Beauty Experts</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3105/3105791.png" alt="Trendy Services" />
+      </div>
+      <h4>Trend-Driven Services & Styles</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/2977/2977345.png" alt="Beauty Tools" />
+      </div>
+      <h4>Latest Beauty Tools & Products</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135765.png" alt="Client Trust" />
+      </div>
+      <h4>Trusted by Hundreds of Clients</h4>
+    </div>
+
+    <div class="feature-box">
+      <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3565/3565418.png" alt="Aftercare" />
+      </div>
+      <h4>Expert Advice & Aftercare Tips</h4>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+  <section class="our-stories-section">
+  <div class="stories-photo">
+    <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80" alt="Elegant Creation Salon story" />
+  </div>
+  <div class="stories-content">
+    <h2>Our Stories</h2>
+    <p>
+      At Elegant Creation Salon, every client’s journey is a story of transformation, care, and confidence. We believe in bringing out your natural elegance through expert styling, personalized beauty treatments, and a welcoming atmosphere. From first-time visitors to loyal guests, we’ve helped countless individuals feel their best—inside and out. Our team’s passion for beauty and wellness is reflected in every haircut, facial, and finishing touch. Discover your own story of elegance with us.
+    </p>
+
+    <div class="stories-logos">
+      <img src="images/Loreal.jpg" alt="L'Oréal logo" />
+      <img src="images/pg.jpg" alt="P&G logo" />
+      <img src="images/lauder.png" alt="Estee Lauder logo" />
+      <img src="images/revlon.jpg" alt="Revlon logo" />
+      <img src="images/sep.jpg" alt="Sephora logo" />
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="reviews-section">
+  <h2>What Our Clients Say</h2>
+  <div class="reviews-container">
+    <div class="review-card">
+      <p>"Elegant Creation Salon truly lives up to its name! The staff is incredibly professional and made me feel pampered from start to finish."</p>
+      <h4>- Simran Mehta</h4>
+      <span>Regular Client</span>
+    </div>
+    <div class="review-card">
+      <p>"The best haircut and styling experience I’ve had in years! Their attention to detail is unmatched."</p>
+      <h4>- Neha Bansal</h4>
+      <span>First-Time Visitor</span>
+    </div>
+    <div class="review-card">
+      <p>"Exceptional service! I got a facial and hair color done, and both turned out amazing. Highly recommended for anyone who wants quality beauty care."</p>
+      <h4>- Ritu Arora</h4>
+      <span>Loyal Customer</span>
+    </div>
+  </div>
+</section>
+
+
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>At Elegant Creation</h3>
+      <p>
+        Our expert team is dedicated to providing personalized hair and beauty services that enhance your natural elegance and confidence.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: ecunisalon@gmail.com</p>
+      <p>Phone: +64 02108501756</p>
+      <p>Address:  406 Great South Road, Papatoetoe,Auckland 2025</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" /></a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Elegant Creation. All rights reserved.</p>
+  </div>
+</footer>
+
+ <script>
+    const heroSlides = document.querySelectorAll('.hero-content-slider .hero-slide');
+    let currentHeroIndex = 0;
+
+    function showHeroSlide(index) {
+      heroSlides.forEach(slide => slide.classList.remove('active-slide'));
+      heroSlides[index].classList.add('active-slide');
+    }
+
+    function nextHeroSlide() {
+      currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+      showHeroSlide(currentHeroIndex);
+    }
+
+    setInterval(nextHeroSlide, 4000); // change every 4 seconds
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
