@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegant Creation - Hero Slider</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* === Base Layout === */
+.hero-slider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background: #fff;
+  gap: 20px;
+  flex-direction: row;
+}
+
+/* === Hero Left (Text Content) === */
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.hero-content-slider {
+  position: relative;
+}
+
+.hero-content-slider .hero-slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+}
+
+.hero-content-slider .active-slide {
+  opacity: 1;
+  position: relative;
+}
+
+/* === Text Styling === */
+.hero-slide h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.hero-slide p {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.hero-slide button {
+  padding: 10px 20px;
+  background-color: #e91e63;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero-slide button:hover {
+  background-color: #d81b60;
+}
+
+/* === Hero Right (Image) === */
+.hero-right {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .hero-slider {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-right {
+    order: 1; /* Show image on top */
+  }
+
+  .hero-left {
+    order: 2; /* Show text below */
+  }
+
+  .hero-slide h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-slide p {
+    font-size: 1em;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="hero-slider">
+    <div class="hero-left">
+      <div class="hero-content-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active-slide">
+          <h1>Where Elegance Meets You</h1>
+          <p>At Elegant Creation, we bring your beauty vision to life with expert care and personalized style. From flawless haircuts to radiant beauty treatments, experience elegance and confidence in every visit.</p>
+          <a href="contact.html"><button>Get Started</button></a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <h1>Transform Your Look Today</h1>
+          <p>Our expert team is dedicated to providing personalized hair and beauty services that enhance your natural elegance and confidence.</p>
+          <a href="contact.html"><button>Get Started</button></a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <h1>Elevate Your Look with Expert Touch</h1>
+          <p>Step into our welcoming salon and experience a luxurious atmosphere where your comfort and satisfaction come first.</p>
+          <a href="contact.html"><button>Get Started</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="images/web.png" alt="Course Image">
+    </div>
+  </div>
+
+  <script>
+    const heroSlides = document.querySelectorAll('.hero-content-slider .hero-slide');
+    let currentHeroIndex = 0;
+
+    function showHeroSlide(index) {
+      heroSlides.forEach(slide => slide.classList.remove('active-slide'));
+      heroSlides[index].classList.add('active-slide');
+    }
+
+    function nextHeroSlide() {
+      currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+      showHeroSlide(currentHeroIndex);
+    }
+
+    setInterval(nextHeroSlide, 4000); // change every 4 seconds
+  </script>
+
+</body>
+</html>

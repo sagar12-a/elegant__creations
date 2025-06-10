@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>International Beauty Skills Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ===== Nail Courses Section Styling ===== */
+    .nail-courses-section {
+      display: flex;
+      gap: 2rem;
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      flex-wrap: wrap;
+    }
+
+    .side-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .side-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .courses-content {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* ===== Responsive: Hide image on mobile ===== */
+    @media (max-width: 768px) {
+      .nail-courses-section {
+        flex-direction: column;
+      }
+
+      .side-image {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/0026ef12-0de3-467b-9bf8-00dcab5cad3e.jpg" alt="Salon Logo" />
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hair.html">Women's eyebrow threading </a></li>
+        <li><a href="makeup.html">Eyelash extensions</a></li>
+        <li><a href="skin.html">Balayage & Ombre</a></li>
+        <li><a href="nail.html" class="active">Hair Colors & Highlights</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </nav>
+  </header>
+
+
+  <div id="whatsapp-chat">
+  <a href="https://wa.me/6402108501756" target="_blank" id="whatsapp-button">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
+  </a>
+</div>
+  <section style="
+    width: 100vw; 
+    height: 50vh; 
+    background: url('images/Artboard Saloon.png') no-repeat center center / cover; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 4vw; 
+    font-weight: 700; 
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+    user-select: none;
+  ">
+    <h2>Hair Colors & Highlights </h2>
+  </section>
+
+  <section class="nail-courses-section">
+    <div class="side-image">
+      <img src="images/hair.png" alt="Nail Courses" />
+    </div>
+
+    <div class="courses-content">
+
+      <h1>Hair Colors & Highlights </h1>
+      <h1>Whether you want a vibrant new shade, subtle highlights, or a full-color makeover, our skilled stylists use premium products to deliver stunning, long-lasting results</h1>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>At Elegant Creation</h3>
+      <p>
+        Our expert team is dedicated to providing personalized hair and beauty services that enhance your natural elegance and confidence.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: ecunisalon@gmail.com</p>
+      <p>Phone: +64 02108501756</p>
+      <p>Address:  406 Great South Road, Papatoetoe,Auckland 2025</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" /></a>
+        <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" /></a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Elegant Creation. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
